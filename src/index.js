@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from 'cors';
+// import cors from 'cors';
 import graphqlHTTP from 'express-graphql';
 import { GraphQLSchema } from 'graphql';
 
@@ -14,26 +14,17 @@ var options = {
   // exclude: ['Users']
 };
 
-// models['user'].graphql = {
-//   attributes: {
-//     exclude: ['description'],
-//     include: { modelPortfolioId: 'int', obj: 'myObj' }
-//   }
-// };
-
 // Font: https://www.npmjs.com/package/sequelize-graphql-schema
 const { generateSchema } = require('sequelize-graphql-schema')(options);
 
 const port = isDevelop ? process.env.PORT : 80;
 const app = express();
-app.use(cors());
+// app.use(cors());
 // app.use(cors({ origin: "http://mysite.com" }));
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send({ status: 'ok' });
 });
-
-// console.log('DEV?', process.env.NODE_ENV);
 
 app.use(
   '/graphql',
@@ -44,6 +35,8 @@ app.use(
 );
 
 app.listen({ port }, () => {
-  console.log(`Graphql on http://localhost:${port}/graphql`);
-  console.log(`Server on http://localhost:${port}/api`);
+  if (isDevelop) {
+    console.log(`Graphql on http://localhost:${port}/graphql`);
+    console.log(`Server on http://localhost:${port}/api`);
+  }
 });
