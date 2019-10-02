@@ -5,6 +5,9 @@
   "repository": "https://github.com/ZeroWhisper/nodejs-base-new-project.git",
   "author": "Marcos <marcos.devel@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "10.16.3"
+  },
   "scripts": {
     "build": "yarn babel-node src/index.js",
     "bld": "PORT=80 babel-node src/index.js",

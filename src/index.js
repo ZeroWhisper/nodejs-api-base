@@ -3,6 +3,8 @@ import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import { GraphQLSchema } from 'graphql';
 
+console.log('START');
+
 import dotenv from 'dotenv';
 dotenv.config();
 
