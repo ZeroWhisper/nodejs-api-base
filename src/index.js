@@ -22,16 +22,16 @@ var options = {
 // Font: https://www.npmjs.com/package/sequelize-graphql-schema
 const { generateSchema } = require('sequelize-graphql-schema')(options);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 80;
 const app = express();
 app.use(cors());
 // app.use(cors({ origin: "http://mysite.com" }));
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   res.send({ status: 'ok' });
 });
 
-console.log('DEV?', process.env.NODE_ENV);
+// console.log('DEV?', process.env.NODE_ENV);
 
 app.use(
   '/graphql',
