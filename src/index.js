@@ -33,9 +33,9 @@ app.use(
   })
 );
 
-app.set('port', process.env.PORT || 5000);
+const port = process.env.PORT || 5000;
 
-app.listen(app.get('port'), () => {
+app.listen(port, () => {
   if (isDevelop) {
     console.log(`Graphql on http://localhost:${port}/graphql`);
     console.log(`Server on http://localhost:${port}/api`);
