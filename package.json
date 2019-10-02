@@ -9,6 +9,9 @@
     "node": "10.16.3"
   },
   "scripts": {
+    "t": "node database-recreate.js",
+    "db:drop": "yarn sequelize db:drop",
+    "db:create": "yarn sequelize db:create",
     "build": "yarn babel-node src/index.js",
     "bld": "PORT=80 babel-node src/index.js",
     "start": "nodemon --exec babel-node src/index.js",

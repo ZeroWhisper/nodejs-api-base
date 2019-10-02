@@ -8,7 +8,7 @@ console.log('START');
 import dotenv from 'dotenv';
 dotenv.config();
 
-import models from '~/app/models';
+// import models from '~/app/models';
 
 const isDevelop = process.env.NODE_ENV === 'dev';
 
@@ -17,7 +17,7 @@ var options = {
 };
 
 // Font: https://www.npmjs.com/package/sequelize-graphql-schema
-const { generateSchema } = require('sequelize-graphql-schema')(options);
+// const { generateSchema } = require('sequelize-graphql-schema')(options);
 
 const app = express();
 // app.use(cors());
@@ -27,13 +27,13 @@ app.get('/api', (req, res) => {
   res.send({ status: 'ok' });
 });
 
-app.use(
-  '/graphql',
-  graphqlHTTP({
-    schema: new GraphQLSchema(generateSchema(models)),
-    graphiql: isDevelop
-  })
-);
+// app.use(
+//   '/graphql',
+//   graphqlHTTP({
+//     schema: new GraphQLSchema(generateSchema(models)),
+//     graphiql: isDevelop
+//   })
+// );
 
 const port = process.env.PORT || 5000;
 

@@ -9,12 +9,6 @@ yarn sequelize db:migrate
 // OR
 
 yarn sequelize model:create --name user --attributes name:string,email:string,password_hash:string &&
-yarn sequelize model:create --name venda --attributes user:integer,produto:integer &&
-yarn sequelize model:create --name produto --attributes name:string,valor:integer &&
-yarn sequelize db:migrate
-
---
-yarn sequelize model:create --name user --attributes name:string,email:string,password_hash:string &&
 yarn sequelize model:create --name venda --attributes userId:integer,produtoId:integer &&
 yarn sequelize model:create --name produto --attributes name:string,valor:integer &&
 yarn sequelize db:migrate
