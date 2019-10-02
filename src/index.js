@@ -33,8 +33,9 @@ app.use(
   })
 );
 
-const port = isDevelop ? process.env.PORT : 80;
-app.listen({ port }, () => {
+app.set('port', process.env.PORT || 5000);
+
+app.listen(app.get('port'), () => {
   if (isDevelop) {
     console.log(`Graphql on http://localhost:${port}/graphql`);
     console.log(`Server on http://localhost:${port}/api`);
