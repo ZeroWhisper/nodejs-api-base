@@ -17,7 +17,6 @@ var options = {
 // Font: https://www.npmjs.com/package/sequelize-graphql-schema
 const { generateSchema } = require('sequelize-graphql-schema')(options);
 
-const port = isDevelop ? process.env.PORT : 80;
 const app = express();
 // app.use(cors());
 // app.use(cors({ origin: "http://mysite.com" }));
@@ -34,6 +33,7 @@ app.use(
   })
 );
 
+const port = isDevelop ? process.env.PORT : 80;
 app.listen({ port }, () => {
   if (isDevelop) {
     console.log(`Graphql on http://localhost:${port}/graphql`);
