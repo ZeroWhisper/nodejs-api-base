@@ -8,6 +8,8 @@ dotenv.config();
 
 import models from '~/app/models';
 
+const isDevelop = process.env.NODE_ENV === 'dev';
+
 var options = {
   // exclude: ['Users']
 };
@@ -22,7 +24,7 @@ var options = {
 // Font: https://www.npmjs.com/package/sequelize-graphql-schema
 const { generateSchema } = require('sequelize-graphql-schema')(options);
 
-const port = process.env.PORT || 80;
+const port = isDevelop ? process.env.PORT : 80;
 const app = express();
 app.use(cors());
 // app.use(cors({ origin: "http://mysite.com" }));
@@ -37,7 +39,7 @@ app.use(
   '/graphql',
   graphqlHTTP({
     schema: new GraphQLSchema(generateSchema(models)),
-    graphiql: process.env.NODE_ENV === 'dev'
+    graphiql: isDevelop
   })
 );
 
