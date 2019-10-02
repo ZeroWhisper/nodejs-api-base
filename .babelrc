@@ -1,0 +1,20 @@
+/**
+ * font: https://medium.com/@pativancarrasco/why-your-es6-syntax-doesnt-work-in-node-js-and-how-to-fix-it-161f0708f1ad
+ * font: https://medium.com/@jeffersontpadua/configurando-um-projeto-nodejs-e-es6-com-babel-7-283fc0c2b640
+ */
+
+// in .babelrc
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    [
+      "babel-plugin-module-resolver",
+      {
+        "root": ["./src/"],
+        "alias": {
+          "~": "./src"
+        }
+      }
+    ]
+  ]
+}
