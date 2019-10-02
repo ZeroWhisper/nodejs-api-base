@@ -6,7 +6,7 @@
   "author": "Marcos <marcos.devel@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel-node src/index.js",
+    "build": "yarn babel-node src/index.js",
     "bld": "PORT=80 babel-node src/index.js",
     "start": "nodemon --exec babel-node src/index.js",
     "st": "nodemon --exec babel-node src/index.js"
