@@ -5,7 +5,7 @@ import { GraphQLSchema } from 'graphql';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import models from '~/app/models';
+// import models from '~/app/models';
 
 const isDevelop = process.env.NODE_ENV === 'dev';
 
