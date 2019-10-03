@@ -10,9 +10,10 @@
   },
   "scripts": {
     "database": "node database-recreate.js",
+    "db:up": "yarn sequelize db:migrate",
     "db:drop": "yarn sequelize db:drop",
     "db:create": "yarn sequelize db:create",
-    "build": "yarn babel src/index.js --out-dir dist",
+    "build": "yarn db:up && yarn babel src/index.js --out-dir dist",
     "server": "node dist/index.js",
     "start": "nodemon --exec babel-node src/index.js",
     "st": "yarn start"
