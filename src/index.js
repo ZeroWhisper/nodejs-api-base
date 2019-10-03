@@ -33,7 +33,7 @@ app.use(
   })
 );
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 80;
 
 app.listen(port, () => {
   // if (isDevelop) {
