@@ -35,6 +35,10 @@ app.get('/api', (req, res) => {
 
 const port = process.env.PORT || 80;
 
+console.log('');
+console.log('INICIO! ' + port);
+console.log('');
+
 app.listen(port, () => {
   if (true || isDevelop) {
     console.log(`Graphql on http://localhost:${port}/graphql`);
