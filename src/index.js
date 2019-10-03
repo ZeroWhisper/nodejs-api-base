@@ -36,8 +36,8 @@ app.use(
 const port = process.env.PORT || 80;
 
 app.listen(port, () => {
-  // if (isDevelop) {
-  console.log(`Graphql on http://localhost:${port}/graphql`);
-  console.log(`Server on http://localhost:${port}/api`);
-  // }
+  if (true || isDevelop) {
+    console.log(`Graphql on http://localhost:${port}/graphql`);
+    console.log(`Server on http://localhost:${port}/api`);
+  }
 });

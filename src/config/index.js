@@ -1,9 +1,10 @@
 // Must be in CommonJS
 require('dotenv').config();
 
-const url = true
-  ? process.env.HEROKU_POSTGRESQL_PURPLE_URL
-  : process.env.DATABASE_URL;
+const url =
+  process.env.NODE_ENV != 'dev'
+    ? process.env.HEROKU_POSTGRESQL_PURPLE_URL
+    : process.env.DATABASE_URL;
 
 const options = {
   dialect: 'postgres'
