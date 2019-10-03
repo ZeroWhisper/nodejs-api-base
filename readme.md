@@ -11,7 +11,9 @@ readme: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 - From database (Not tested yet) https://www.npmjs.com/package/sequelize-auto-v2
 - With already exists models https://stackoverflow.com/questions/27835801/how-to-auto-generate-migrations-with-sequelize-cli-from-sequelize-models
 - https://medium.com/@rogeriothe_48115/relacionamentos-com-sequelize-guia-final-2b3baf21b2a1
--
+
+Babel
+- https://medium.com/@alberto.schiabel/nodejs-in-es6-es7-how-do-you-do-it-in-production-d897c51c729c
 
 ### Inicializando o projeto
 
