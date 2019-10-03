@@ -20,10 +20,6 @@ async function run() {
     if (stderr) console.log('stderr:', stderr);
     console.log('stdout:', stdout);
   }
-
-  // const { stdout, stderr } = await exec('ls');
-  // console.log('stdout:', stdout);
-  // console.log('stderr:', stderr);
 }
 
 run();
