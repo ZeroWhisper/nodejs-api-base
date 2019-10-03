@@ -14,8 +14,8 @@
     "db:drop": "yarn sequelize db:drop",
     "db:create": "yarn sequelize db:create",
     "babel-run": "yarn babel src/index.js --out-dir dist",
-    "build": "yarn db:up && yarn babel-run",
-    "server": "node dist/index.js",
+    "not-used-build": "yarn db:up && yarn babel-run",
+    "server": "yarn babel-node src/index.js",
     "start": "nodemon --exec babel-node src/index.js",
     "st": "yarn start"
   },
