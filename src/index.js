@@ -28,7 +28,8 @@ app.use(
   '/graphql',
   graphqlHTTP({
     schema: new GraphQLSchema(generateSchema(models)),
-    graphiql: isDevelop
+    // graphiql: isDevelop
+    graphiql: true
   })
 );
 
